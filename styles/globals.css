@@ -3,8 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: "Pixeled";
+	src: url("/fonts/retro.ttf");
+	font-style: normal;
+	font-weight: 400;
+}
+
 html {
 	@apply scroll-smooth;
+	font-family: "Pixeled";
 
 	::-webkit-scrollbar {
 		@apply w-2;
@@ -15,7 +23,7 @@ html {
 	}
 
 	::-webkit-scrollbar-thumb {
-		@apply bg-white;
+		@apply bg-green-500;
 	}
 
 	::-webkit-scrollbar-thumb:hover {
@@ -24,9 +32,39 @@ html {
 }
 
 body {
-	@apply bg-rose-400 overflow-x-hidden;
+	@apply bg-primary overflow-x-hidden;
+}
+
+h1 {
+	@apply text-white text-6xl uppercase filter drop-shadow-md mb-2;
+}
+
+h2 {
+	@apply text-green-500 text-4xl mb-4 last:mb-0;
 }
 
 p {
-	@apply max-w-[75ch] mb-4 last:mb-0;
+	@apply max-w-[75ch] mb-4 last-of-type:mb-0 text-white;
+}
+
+.hero {
+	@apply bg-cover bg-center bg-no-repeat bg-primary;
+	background-image: url("/banner.png");
+
+	&:before {
+		content: "";
+		@apply bg-primary bg-opacity-30 h-full w-full absolute top-0 left-0 z-0;
+	}
+}
+
+.button {
+	@apply py-2 px-4 shadow-md hover:bg-green-500 z-10 text-white uppercase text-lg border-solid border-4 border-green-500 transition-all duration-300;
+}
+
+.slide {
+	@apply transition-all duration-300 transform scale-100 opacity-100 cursor-pointer;
+
+	img {
+		@apply h-full w-full;
+	}
 }
