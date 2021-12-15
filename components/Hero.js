@@ -6,7 +6,7 @@ import logo from "../public/logo.png";
 export default function Hero(props) {
 	return (
 		<>
-			<div className='hero h-screen'>
+			<div className='hero lg:px-0 h-screen px-12 text-center'>
 				<div className='flex flex-col items-center justify-center h-full'>
 					<div className='max-w-[15rem] animate-hover filter drop-shadow-md'>
 						<Image src={logo} alt='420 Punks' />

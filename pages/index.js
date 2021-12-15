@@ -34,7 +34,7 @@ export default function Home() {
 			</Wrapper>
 
 			<Wrapper>
-				<Merchandise title='Merchandise' />
+				<Merchandise title='Merch' />
 			</Wrapper>
 
 			{/* Projects */}
