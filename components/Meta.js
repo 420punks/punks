@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import banner from "../public/banner.jpg";
+import banner from "../public/banner.png";
 
 export default function Meta(props) {
 	return (
@@ -20,10 +20,10 @@ export default function Meta(props) {
 				<meta name='twitter:card' content='summary' />
 				<meta name='twitter:title' content={props.title} />
 				<meta name='twitter:description' content={props.desc} />
-				<meta name='twitter:site' content='@MetaVaxNFT' />
-				<meta name='twitter:creator' content='@MetaVaxNFT' />
-				<link rel='icon' type='image/png' href='/favicon.png' />
-				<link rel='apple-touch-icon' href='/favicon.png' />
+				<meta name='twitter:site' content='@420Punks' />
+				<meta name='twitter:creator' content='@420Punks' />
+				<link rel='icon' type='image/png' href='/logo.png' />
+				<link rel='apple-touch-icon' href='/logo.png' />
 				<meta property='og:image' content={banner} />
 				<meta name='twitter:image' content={banner} />
 				<link rel='canonical' href='' />

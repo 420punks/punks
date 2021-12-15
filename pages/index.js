@@ -1,16 +1,18 @@
-// import Meta from "../components/Meta";
+import Meta from "../components/Meta";
 import Wrapper from "../components/prebuilt/Wrapper";
-import NFTSlider from "../components/NFTSlider";
-import Roadmap from "../components/Roadmap/Roadmap";
-import Accordian from "../components/prebuilt/Accordian";
 import Hero from "../components/Hero";
+import NFTSlider from "../components/NFTSlider";
 import About from "../components/About";
+import Roadmap from "../components/Roadmap/Roadmap";
 import Merchandise from "../components/Merchandise";
+import Details from "../components/Details";
+import Footer from "../components/Footer";
 
 export default function Home() {
 	return (
 		<>
-			{/* <Meta title='Title' desc='Descrition' /> */}
+			<Meta title='420 Punks' desc='Descrition' />
+
 			<Hero title='420 Punks' tagline='Tagline' opensea='#' />
 
 			<NFTSlider />
@@ -33,7 +35,8 @@ export default function Home() {
 				<Merchandise title='Merchandise' />
 			</Wrapper>
 
-			<Wrapper className='bg-green-500'>
+			{/* Projects */}
+			<Wrapper green>
 				<div className='flex flex-col items-center justify-center'>
 					<h2 className='text-primary mb-8'>Other Projects</h2>
 					<div className='lg:grid-cols-3 auto-rows-auto grid grid-cols-2 gap-12'>
@@ -53,59 +56,18 @@ export default function Home() {
 			</Wrapper>
 
 			<Wrapper>
-				<div className='text-center'>
-					<h2 className='mb-12'>Mint Details</h2>
-					<Accordian title='Question 1'>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rem
-							ab, aut unde nobis ad et nemo blanditiis nihil error odio, qui
-							facilis dolores tempora?
-						</p>
-					</Accordian>
-
-					<Accordian title='Question 1'>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rem
-							ab, aut unde nobis ad et nemo blanditiis nihil error odio, qui
-							facilis dolores tempora?
-						</p>
-					</Accordian>
-
-					<Accordian title='Question 1'>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rem
-							ab, aut unde nobis ad et nemo blanditiis nihil error odio, qui
-							facilis dolores tempora?
-						</p>
-					</Accordian>
-
-					<Accordian title='Question 1'>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rem
-							ab, aut unde nobis ad et nemo blanditiis nihil error odio, qui
-							facilis dolores tempora?
-						</p>
-					</Accordian>
-				</div>
+				<Details />
 			</Wrapper>
 
-			<Wrapper className='h-screen bg-green-500'>
+			{/* 420Verse */}
+			<Wrapper className='h-screen' green>
 				<div className='flex flex-col items-center justify-center h-full'>
 					<h2 className='text-primary'>420Verse</h2>
 					<h3 className='text-white'>Coming Soon...</h3>
 				</div>
 			</Wrapper>
 
-			<footer className='flex flex-col items-center justify-center p-8'>
-				<p>Socials Here</p>
-				<p>Copyright Info</p>
-				<p className='text-xs opacity-50'>
-					Designed by{" "}
-					<a href='https://illusivemedia.co' target='_blank' rel='noreferrer'>
-						Illusive Media
-					</a>
-				</p>
-			</footer>
+			<Footer />
 		</>
 	);
 }
