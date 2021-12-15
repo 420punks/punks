@@ -11,10 +11,14 @@ export default function RoadmapTile({
 		<>
 			<div
 				className={`relative roadmap transform hover:translate-x-6 transition-all duration-300 ease-in-out flex flex-row justify-start group w-full items-center bg-primary px-12 py-8 shadow-md mb-8 last:mb-0 ${
-					done && "line-through !bg-green-400"
+					done && "line-through decoration-green-400 decoration-2"
 				}`}
 			>
-				<h4 className='group group-hover:text-green-300 -mt-2 text-6xl font-bold text-green-400 transition-all duration-300'>
+				<h4
+					className={`group group-hover:text-green-300 -mt-2 text-6xl font-bold text-green-400 transition-all duration-300 ${
+						done && "!text-white"
+					}`}
+				>
 					{number}
 				</h4>
 				<div className='group ml-6'>
@@ -24,7 +28,7 @@ export default function RoadmapTile({
 
 				<div
 					className={`-left-3 w-6 aspect-square absolute bg-white shadow-md ${
-						done && "!bg-green-200"
+						done && "bg-green-900"
 					}`}
 				>
 					<div

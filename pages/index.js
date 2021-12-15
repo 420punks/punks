@@ -7,6 +7,7 @@ import Roadmap from "../components/Roadmap/Roadmap";
 import Merchandise from "../components/Merchandise";
 import Details from "../components/Details";
 import Footer from "../components/Footer";
+import Projects from "../components/Projects";
 
 export default function Home() {
 	return (
@@ -20,9 +21,10 @@ export default function Home() {
 			<Wrapper>
 				<About title='About 420 Punks'>
 					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-						repudiandae expedita quod. Asperiores expedita facilis eligendi,
-						aperiam, optio dolore dolorem veritatis nisi enim aliquid deleniti?
+						A total of 420 punks living on the polygon blockchain, they were
+						created with the psychedelic elixir by the 420 god himself. Owning
+						one of the 420 punks not only gives you ownership over the coolest
+						jpegs but a lot of perks and benefits.
 					</p>
 				</About>
 			</Wrapper>
@@ -37,22 +39,7 @@ export default function Home() {
 
 			{/* Projects */}
 			<Wrapper green>
-				<div className='flex flex-col items-center justify-center'>
-					<h2 className='text-primary mb-8'>Other Projects</h2>
-					<div className='lg:grid-cols-3 auto-rows-auto grid grid-cols-2 gap-12'>
-						<div className='bg-primary hover:shadow-xl hover:scale-105 flex flex-col items-center justify-center px-8 py-32 text-center transition-all duration-500 ease-in-out transform shadow-lg'>
-							<h2 className='text-white'>PROJECT PREVIEW</h2>
-						</div>
-
-						<div className='bg-primary hover:shadow-xl hover:scale-105 flex flex-col items-center justify-center px-8 py-32 text-center transition-all duration-500 ease-in-out transform shadow-lg'>
-							<h2 className='text-white'>PROJECT PREVIEW</h2>
-						</div>
-
-						<div className='bg-primary hover:shadow-xl hover:scale-105 flex flex-col items-center justify-center px-8 py-32 text-center transition-all duration-500 ease-in-out transform shadow-lg'>
-							<h2 className='text-white'>PROJECT PREVIEW</h2>
-						</div>
-					</div>
-				</div>
+				<Projects />
 			</Wrapper>
 
 			<Wrapper>

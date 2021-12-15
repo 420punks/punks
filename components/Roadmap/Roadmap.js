@@ -14,35 +14,39 @@ export default function Roadmap({ title }) {
 			</div>
 
 			<div className='auto-rows-auto grid grid-cols-1'>
-				<RoadmapTile number='0' current>
+				<RoadmapTile number='10%' done>
 					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt,
-						dicta repudiandae voluptas corrupti esse totam dolorum animi ducimus
-						quae dolores consequatur aspernatur neque impedit recusandae!
+						10% - Drop 210 punks | Building a discord community | Regular
+						giveaways and poker games for exclusive punk holders
 					</p>
 				</RoadmapTile>
 
-				<RoadmapTile number='1'>
+				<RoadmapTile number='20%' current>
+					<p>Mint 210 punks | Pre-sale 0.03 ETH | Public sale - 0.045 ETH</p>
+				</RoadmapTile>
+
+				<RoadmapTile number='30%'>
+					<p>Merchandise Launch (Punk holders get profit share)</p>
+				</RoadmapTile>
+
+				<RoadmapTile number='40%'>
+					<p>7 days long poker league with a total prize pool of 1 ETH</p>
+				</RoadmapTile>
+
+				<RoadmapTile number='50%'>
+					<p>White paper for future projects stake holding patterns.</p>
+				</RoadmapTile>
+
+				<RoadmapTile number='70%'>
 					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt,
-						dicta repudiandae voluptas corrupti esse totam dolorum animi ducimus
-						quae dolores consequatur aspernatur neque impedit recusandae!
+						Launch of next project The69Punks backed by The420Punks community.
 					</p>
 				</RoadmapTile>
 
-				<RoadmapTile number='2'>
+				<RoadmapTile number='99%'>
 					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt,
-						dicta repudiandae voluptas corrupti esse totam dolorum animi ducimus
-						quae dolores consequatur aspernatur neque impedit recusandae!
-					</p>
-				</RoadmapTile>
-
-				<RoadmapTile number='3'>
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt,
-						dicta repudiandae voluptas corrupti esse totam dolorum animi ducimus
-						quae dolores consequatur aspernatur neque impedit recusandae!
+						Vegas 2022 Meet, there's never a 100% because the community intends
+						to grow forever!
 					</p>
 				</RoadmapTile>
 			</div>

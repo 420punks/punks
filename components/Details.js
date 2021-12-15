@@ -6,35 +6,28 @@ export default function Details() {
 		<>
 			<div className='text-center'>
 				<h2 className='mb-12'>Mint Details</h2>
-				<Accordian title='Question 1'>
+				<Accordian title='How Much?'>
+					<p>0.03 ETH for Whitelisted / 0.045 ETH for public sale</p>
+				</Accordian>
+
+				<Accordian title='Where to mint?'>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rem ab,
-						aut unde nobis ad et nemo blanditiis nihil error odio, qui facilis
-						dolores tempora?
+						Mint cards will be available on opensea , these will be announced in
+						discord/instagram/twitter/website
 					</p>
 				</Accordian>
 
-				<Accordian title='Question 1'>
+				<Accordian title='How to buy?'>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rem ab,
-						aut unde nobis ad et nemo blanditiis nihil error odio, qui facilis
-						dolores tempora?
-					</p>
-				</Accordian>
-
-				<Accordian title='Question 1'>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rem ab,
-						aut unde nobis ad et nemo blanditiis nihil error odio, qui facilis
-						dolores tempora?
-					</p>
-				</Accordian>
-
-				<Accordian title='Question 1'>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rem ab,
-						aut unde nobis ad et nemo blanditiis nihil error odio, qui facilis
-						dolores tempora?
+						Tutorial video:{" "}
+						<a
+							href='#'
+							target='_blank'
+							rel='noreferrer'
+							className='hover:text-white'
+						>
+							Link
+						</a>
 					</p>
 				</Accordian>
 			</div>
