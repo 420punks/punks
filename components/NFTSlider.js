@@ -56,7 +56,7 @@ export default function NFTSlider() {
 		),
 		customPaging: (i) => (
 			<div className='w-full mt-4'>
-				<div className='w-8 h-2 bg-white bg-opacity-50 bar'></div>
+				<div className='bar w-8 h-2 bg-white bg-opacity-50'></div>
 				<div className='hidden'>{i + 1}</div>
 			</div>
 		),
@@ -81,7 +81,7 @@ export default function NFTSlider() {
 
 	return (
 		<>
-			<div className='relative slider'>
+			<div className='slider relative'>
 				<Slider {...settings}>
 					{images.map((img, index) => (
 						<Image key={index} src={img} alt={img} layout='responsive' />
