@@ -73,3 +73,47 @@ a {
 		@apply h-full w-full;
 	}
 }
+
+.merchSlide {
+	@apply transform scale-75 opacity-80 transition-all duration-700;
+}
+
+.merchActive {
+	@apply !scale-100;
+}
+
+.slick-dots {
+	li {
+		@apply !w-auto;
+	}
+
+	button:before {
+		@apply text-white text-base mt-5 !important;
+	}
+}
+
+li.slick-active {
+	div {
+		@apply bg-green-500 bg-opacity-100 !important;
+	}
+}
+
+.arrow {
+	@apply cursor-pointer absolute top-[45%] z-10 text-6xl;
+
+	svg {
+		@apply transition-all duration-300 text-green-500;
+
+		&:hover {
+			@apply text-green-300;
+		}
+	}
+
+	&.prev {
+		@apply left-2;
+	}
+
+	&.next {
+		@apply right-2;
+	}
+}

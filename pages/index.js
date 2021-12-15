@@ -8,6 +8,7 @@ import Merchandise from "../components/Merchandise";
 import Details from "../components/Details";
 import Footer from "../components/Footer";
 import Projects from "../components/Projects";
+import MerchSlider from "../components/MerchSlider";
 
 export default function Home() {
 	return (
@@ -47,7 +48,7 @@ export default function Home() {
 			</Wrapper>
 
 			{/* 420Verse */}
-			<Wrapper className='h-screen' green>
+			<Wrapper className='md:h-screen h-[50vh]' green>
 				<div className='flex flex-col items-center justify-center h-full'>
 					<h2 className='text-primary'>420Verse</h2>
 					<h3 className='text-white'>Coming Soon...</h3>

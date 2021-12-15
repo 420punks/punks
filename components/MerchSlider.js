@@ -5,15 +5,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 
-import nft1 from "../public/slider-imgs/punk1.png";
-import nft2 from "../public/slider-imgs/punk2.png";
-import nft3 from "../public/slider-imgs/punk3.png";
-import nft4 from "../public/slider-imgs/punk4.png";
-import nft5 from "../public/slider-imgs/punk5.png";
-import nft6 from "../public/slider-imgs/punk6.png";
-
-export default function NFTSlider() {
-	const images = [nft1, nft2, nft3, nft4, nft5, nft6];
+export default function MerchSlider() {
+	const merch = [
+		{ name: "Merch Name", img: "", url: "" },
+		{ name: "Merch Name", img: "", url: "" },
+		{ name: "Merch Name", img: "", url: "" },
+		{ name: "Merch Name", img: "", url: "" },
+		{ name: "Merch Name", img: "", url: "" },
+		{ name: "Merch Name", img: "", url: "" },
+	];
 
 	const NextArrow = ({ onClick }) => {
 		return (
@@ -37,11 +37,11 @@ export default function NFTSlider() {
 		infinite: true,
 		lazyload: true,
 		focusOnSelect: true,
-		speed: 2500,
-		autoplaySpeed: 1,
-		dots: false,
-		arrows: false,
-		slidesToShow: 5,
+		speed: 700,
+		autoplaySpeed: 5000,
+		dots: true,
+		arrows: true,
+		slidesToShow: 3,
 		slidesToScroll: 1,
 		centerMode: true,
 		centerPadding: 0,
@@ -55,7 +55,7 @@ export default function NFTSlider() {
 			</div>
 		),
 		customPaging: (i) => (
-			<div className='w-full mt-4'>
+			<div className='flex flex-row w-full gap-2 mt-2'>
 				<div className='bar w-8 h-2 bg-white bg-opacity-50'></div>
 				<div className='hidden'>{i + 1}</div>
 			</div>
@@ -65,13 +65,13 @@ export default function NFTSlider() {
 			{
 				breakpoint: 900,
 				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
+					slidesToShow: 1,
+					slidesToScroll: 1,
 					focusOnSelect: true,
 					swipeToSlide: true,
 					lazyload: true,
-					speed: 2500,
-					autoplaySpeed: 1,
+					speed: 700,
+					autoplaySpeed: 5000,
 					infinite: true,
 					autoplay: true,
 					arrows: false,
@@ -82,10 +82,19 @@ export default function NFTSlider() {
 
 	return (
 		<>
-			<div className='slider relative'>
+			<div className='slider merch relative'>
 				<Slider {...settings}>
-					{images.map((img, index) => (
-						<Image key={index} src={img} alt={img} layout='responsive' />
+					{merch.map((item, index) => (
+						<a
+							href={item.url}
+							key={item.name}
+							className={`aspect-square group text-white hover:bg-green-500 hover:bg-opacity-25 text-4xl !flex flex-col items-center justify-center w-full h-full p-8 text-center border-4 border-green-500 border-solid ${
+								index === imageIndex ? "merchSlide merchActive" : "merchSlide"
+							}`}
+						>
+							{item.name}
+						</a>
+						// <Image key={index} src={img} alt={img} layout='responsive' />
 					))}
 				</Slider>
 			</div>
