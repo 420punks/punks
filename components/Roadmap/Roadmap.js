@@ -16,8 +16,8 @@ export default function Roadmap({ title }) {
 			<div className='auto-rows-auto grid grid-cols-1'>
 				<RoadmapTile number='10%' done>
 					<p>
-						10% - Drop 210 punks | Building a discord community | Regular
-						giveaways and poker games for exclusive punk holders
+						Drop 210 punks | Building a discord community | Regular giveaways
+						and poker games for exclusive punk holders
 					</p>
 				</RoadmapTile>
 
