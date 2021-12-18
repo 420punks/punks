@@ -5,15 +5,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 
-import nft1 from "../public/slider-imgs/punk1.png";
-import nft2 from "../public/slider-imgs/punk2.png";
-import nft3 from "../public/slider-imgs/punk3.png";
-import nft4 from "../public/slider-imgs/punk4.png";
-import nft5 from "../public/slider-imgs/punk5.png";
-import nft6 from "../public/slider-imgs/punk6.png";
-
 export default function NFTSlider() {
-	const images = [nft1, nft2, nft3, nft4, nft5, nft6];
+	const images = [
+		{ name: "nftOne", url: "/slider-imgs/punk1.png" },
+		{ name: "nftTwo", url: "/slider-imgs/punk2.png" },
+		{ name: "nftThree", url: "/slider-imgs/punk3.png" },
+		{ name: "nftFour", url: "/slider-imgs/punk4.png" },
+		{ name: "nftFive", url: "/slider-imgs/punk5.png" },
+		{ name: "nftSix", url: "/slider-imgs/punk6.png" },
+	];
 
 	const NextArrow = ({ onClick }) => {
 		return (
@@ -85,7 +85,12 @@ export default function NFTSlider() {
 			<div className='slider relative'>
 				<Slider {...settings}>
 					{images.map((img, index) => (
-						<Image key={index} src={img} alt={img} layout='responsive' />
+						<img
+							loading='lazy'
+							key={img.name}
+							src={img.url}
+							alt='NFT Preview'
+						/>
 					))}
 				</Slider>
 			</div>

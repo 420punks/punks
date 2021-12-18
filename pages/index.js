@@ -4,12 +4,43 @@ import Hero from "../components/Hero";
 import NFTSlider from "../components/NFTSlider";
 import About from "../components/About";
 import Roadmap from "../components/Roadmap/Roadmap";
+import RoadmapTile from "../components/Roadmap/RoadmapTile";
 import Merchandise from "../components/Merchandise";
+import MerchSlider from "../components/MerchSlider";
 import Details from "../components/Details";
+import Accordian from "../components/prebuilt/Accordian";
 import Footer from "../components/Footer";
 import Projects from "../components/Projects";
 
-export default function Home() {
+import { createClient } from "contentful";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+
+export async function getStaticProps() {
+	const client = createClient({
+		space: process.env.CONTENTFUL_SPACE_ID,
+		accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+	});
+
+	const about = await client.getEntries({ content_type: "home" });
+	const projects = await client.getEntries({ content_type: "projects" });
+	const roadmap = await client.getEntries({ content_type: "roadmap" });
+	const merch = await client.getEntries({ content_type: "merch" });
+	const mint = await client.getEntries({ content_type: "mint" });
+
+	return {
+		props: {
+			about: about.items,
+			project: projects.items,
+			roadmap: roadmap.items,
+			merch: merch.items,
+			mint: mint.items,
+		},
+	};
+}
+
+export default function Home({ about, roadmap, merch, project, mint }) {
+	console.log(mint);
+
 	return (
 		<>
 			<Meta title='420 Punks' desc='Descrition' />
@@ -23,31 +54,45 @@ export default function Home() {
 			<NFTSlider />
 
 			<Wrapper>
-				<About title='About 420 Punks'>
-					<p>
-						A total of 420 punks living on the polygon blockchain, they were
-						created with the psychedelic elixir by the 420 god himself. Owning
-						one of the 420 punks not only gives you ownership over the coolest
-						jpegs but a lot of perks and benefits.
-					</p>
+				<About title={about[0].fields.title}>
+					{documentToReactComponents(about[0].fields.about)}
 				</About>
 			</Wrapper>
 
 			<Wrapper green>
-				<Roadmap title='Roadmap' />
+				<Roadmap title='Roadmap'>
+					{roadmap.reverse().map((tile) => (
+						<RoadmapTile
+							key={tile.sys.id}
+							number={tile.fields.percentage}
+							current={tile.fields.current}
+							done={tile.fields.done}
+						>
+							{documentToReactComponents(tile.fields.content)}
+						</RoadmapTile>
+					))}
+				</Roadmap>
 			</Wrapper>
 
 			<Wrapper>
-				<Merchandise title='Merch' />
+				<Merchandise title='Merch'>
+					<MerchSlider merch={merch} />
+				</Merchandise>
 			</Wrapper>
 
 			{/* Projects */}
 			<Wrapper green>
-				<Projects />
+				<Projects projects={project} />
 			</Wrapper>
 
 			<Wrapper>
-				<Details />
+				<Details>
+					{mint.reverse().map((detail) => (
+						<Accordian key={detail.sys.id} title={detail.fields.title}>
+							{documentToReactComponents(detail.fields.content)}
+						</Accordian>
+					))}
+				</Details>
 			</Wrapper>
 
 			{/* 420Verse */}

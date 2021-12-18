@@ -5,16 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 
-import merchOne from "../public/merch1.png";
-
-export default function MerchSlider() {
-	const merch = [
-		{ name: "Hoodie", img: merchOne, url: "" },
-		{ name: "Hoodie", img: merchOne, url: "" },
-		{ name: "Hoodie", img: merchOne, url: "" },
-		{ name: "Hoodie", img: merchOne, url: "" },
-	];
-
+export default function MerchSlider({ merch }) {
 	const NextArrow = ({ onClick }) => {
 		return (
 			<div className='arrow next' onClick={onClick}>
@@ -86,15 +77,19 @@ export default function MerchSlider() {
 				<Slider {...settings}>
 					{merch.map((item, index) => (
 						<div
-							key={item.name}
-							className={`aspect-square group text-white hover:bg-green-500 hover:bg-opacity-25 text-4xl !flex flex-col items-center justify-center w-full h-full p-8 text-center border-4 border-green-500 border-solid ${
+							key={item.sys.id}
+							className={`relative aspect-square h-full group text-white hover:bg-green-500 hover:bg-opacity-25 text-4xl !flex flex-col items-center justify-center w-full p-8 text-center border-4 border-green-500 border-solid ${
 								index === imageIndex ? "merchSlide merchActive" : "merchSlide"
 							}`}
 						>
 							<span className=' inset-0group group-hover:opacity-100 absolute z-10 transition-all duration-300 opacity-0'>
-								{item.name}
+								{item.fields.title}
 							</span>
-							<Image src={item.img} alt={item.name} layout='fill' />
+							<Image
+								src={"https:" + item.fields.preview.fields.file.url}
+								alt={item.fields.title}
+								layout='fill'
+							/>
 						</div>
 						// <Image key={index} src={img} alt={img} layout='responsive' />
 					))}

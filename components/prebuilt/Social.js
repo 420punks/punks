@@ -51,15 +51,15 @@ export default function Social() {
 	return (
 		<>
 			<div className='flex flex-row items-center justify-center gap-4 text-3xl text-black'>
-				{socials.map((social) => (
+				{socials.map((social, index) => (
 					<>
 						{social.url && (
 							<a
+								key={social.name}
 								href={social.url}
 								rel='noreferrer'
 								target='_blank'
 								className='hover:text-green-400 text-white transition-all duration-300'
-								key={social.name}
 							>
 								{social.icon}
 							</a>

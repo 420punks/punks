@@ -17,7 +17,7 @@ export default function RoadmapTile({
 						done && "!text-green-900"
 					}`}
 				>
-					{number}
+					{number}%
 				</h4>
 				<div
 					className={`group ml-6 ${
