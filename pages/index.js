@@ -8,14 +8,17 @@ import Merchandise from "../components/Merchandise";
 import Details from "../components/Details";
 import Footer from "../components/Footer";
 import Projects from "../components/Projects";
-import MerchSlider from "../components/MerchSlider";
 
 export default function Home() {
 	return (
 		<>
 			<Meta title='420 Punks' desc='Descrition' />
 
-			<Hero title='420 Punks' tagline='Tagline' opensea='#' />
+			<Hero
+				title='420 Punks'
+				tagline='Tagline'
+				opensea='https://opensea.io/collection/the420punks'
+			/>
 
 			<NFTSlider />
 

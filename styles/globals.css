@@ -63,7 +63,7 @@ a {
 }
 
 .button {
-	@apply py-2 px-4 shadow-md hover:bg-green-500 z-10 text-white uppercase text-lg border-solid border-4 border-green-500 transition-all duration-300;
+	@apply py-2 px-4 shadow-md hover:bg-green-500 z-10 !text-white uppercase text-lg border-solid border-4 border-green-500 transition-all duration-300;
 }
 
 .slide {
