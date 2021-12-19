@@ -1,11 +1,15 @@
-import React from "react";
-
 export default function Leaderboard({ leaderboard }) {
 	const sorted = leaderboard.sort(
-		(first, second) => second.fields.total - first.fields.total
+		(first, second) =>
+			(second.fields.total =
+				second.fields.gold * 7 +
+				second.fields.silver * 5 +
+				second.fields.bronze * 3) -
+			(first.fields.total =
+				first.fields.gold * 7 +
+				first.fields.silver * 5 +
+				first.fields.bronze * 3)
 	);
-
-	const first = sorted[0];
 
 	return (
 		<>
@@ -34,7 +38,12 @@ export default function Leaderboard({ leaderboard }) {
 							{medals.fields.gold}
 						</td>
 						<td className='total' label='Total'>
-							{medals.fields.total}
+							{
+								(medals.fields.total =
+									medals.fields.gold * 7 +
+									medals.fields.silver * 5 +
+									medals.fields.bronze * 3)
+							}
 						</td>
 					</tr>
 				))}

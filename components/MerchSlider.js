@@ -76,7 +76,10 @@ export default function MerchSlider({ merch }) {
 			<div className='slider merch relative'>
 				<Slider {...settings}>
 					{merch.map((item, index) => (
-						<div
+						<a
+							href={item.fields.url}
+							target='_blank'
+							rel='noreferrer'
 							key={item.sys.id}
 							className={`relative aspect-square h-full group text-white hover:bg-green-500 hover:bg-opacity-25 text-4xl !flex flex-col items-center justify-center w-full p-8 text-center border-4 border-green-500 border-solid ${
 								index === imageIndex ? "merchSlide merchActive" : "merchSlide"
@@ -90,7 +93,7 @@ export default function MerchSlider({ merch }) {
 								alt={item.fields.title}
 								layout='fill'
 							/>
-						</div>
+						</a>
 						// <Image key={index} src={img} alt={img} layout='responsive' />
 					))}
 				</Slider>

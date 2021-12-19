@@ -39,7 +39,9 @@ export async function getStaticProps() {
 }
 
 export default function Home({ about, roadmap, merch, project, mint }) {
-	console.log(mint);
+	const roadmapSorted = roadmap.sort(
+		(first, second) => first.fields.percentage - second.fields.percentage
+	);
 
 	return (
 		<>
@@ -61,7 +63,7 @@ export default function Home({ about, roadmap, merch, project, mint }) {
 
 			<Wrapper green>
 				<Roadmap title='Roadmap'>
-					{roadmap.reverse().map((tile) => (
+					{roadmapSorted.map((tile) => (
 						<RoadmapTile
 							key={tile.sys.id}
 							number={tile.fields.percentage}
