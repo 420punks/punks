@@ -17,20 +17,20 @@ export default function Nav({ position }) {
 						btnClass='hover:text-red-500 fixed'
 					>
 						<div className='flex flex-col'>
-							<Link href={`/`} key='home' passHref>
+							<Link href='/' passHref>
 								Home
 							</Link>
-							<Link href={`/leaderboard`} key='leaderboard' passHref>
+							<Link href='/leaderboard' passHref>
 								Leaderboard
 							</Link>
 						</div>
 					</Modal>
 				</div>
 				<div className='md:flex flex-row hidden gap-4'>
-					<Link href={`/`} key='home' passHref>
+					<Link href='/' passHref>
 						Home
 					</Link>
-					<Link href={`/leaderboard`} key='leaderboard' passHref>
+					<Link href='/leaderboard' passHref>
 						Leaderboard
 					</Link>
 				</div>
