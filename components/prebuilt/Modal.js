@@ -34,10 +34,10 @@ export default function Modal({
 							onClick={() => setIsOpen(false)}
 						></div>
 						<motion.div
-							initial={{ scale: 0, x: -50, y: -50 }}
+							initial={{ scale: 0, x: -125, y: -50 }}
 							animate={{ scale: 1 }}
 							exit={{ scale: 0 }}
-							className='bg-black shadow-xl rounded-3xl modal'
+							className='rounded-3xl modal bg-black shadow-xl'
 						>
 							<div className={`modal-content text-xl text-white ${className}`}>
 								{children}

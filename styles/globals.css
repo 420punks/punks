@@ -62,6 +62,11 @@ a {
 	}
 }
 
+.l-hero {
+	@apply bg-cover bg-center bg-no-repeat;
+	background-image: url("/banner.png");
+}
+
 .button {
 	@apply py-2 px-4 shadow-md hover:bg-green-500 z-10 !text-white uppercase text-lg border-solid border-4 border-green-500 transition-all duration-300;
 }
@@ -116,4 +121,41 @@ li.slick-active {
 	&.next {
 		@apply right-2;
 	}
+}
+
+.leaderboard {
+	td {
+		@apply p-4 md:table-cell flex;
+
+		&:before {
+			content: attr(label);
+			@apply w-32 mr-6 text-left md:hidden;
+		}
+	}
+	th {
+		@apply p-4;
+	}
+	thead {
+		@apply md:table-header-group hidden;
+	}
+}
+
+.first {
+	@apply text-primary bg-green-500 transform scale-105;
+
+	& > td {
+		@apply bg-green-500 w-full;
+	}
+}
+
+.bronze {
+	@apply before:text-amber-700;
+}
+
+.silver {
+	@apply before:text-gray-300;
+}
+
+.gold {
+	@apply before:text-yellow-400;
 }
