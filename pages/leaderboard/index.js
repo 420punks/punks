@@ -17,6 +17,7 @@ export async function getStaticProps() {
 	return {
 		props: {
 			leaderboard: leaderboard.items,
+			revalidate: 1,
 		},
 	};
 }
