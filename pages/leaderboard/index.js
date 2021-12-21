@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "../../public/logo.png";
+import Meta from "../../components/Meta";
 import Wrapper from "../../components/prebuilt/Wrapper";
 import Leaderboard from "../../components/Leaderboard";
 
@@ -20,10 +21,14 @@ export async function getStaticProps() {
 	};
 }
 
-export default function index({ leaderboard }) {
+export default function Scores({ leaderboard }) {
 	console.log(leaderboard);
 	return (
 		<>
+			<Meta
+				title='420 Punks'
+				desc='A total of 420 punks living on the polygon blockchain'
+			/>
 			<Wrapper className='bg-blend-luminosity bg-primary relative flex flex-col items-center justify-start h-full min-h-screen text-center'>
 				<div className='l-hero bg-blend-luminosity blur-sm opacity-40 absolute inset-0 z-0 w-full h-full'></div>
 				<div className='max-w-[8rem] animate-hover filter drop-shadow-md mx-auto'>

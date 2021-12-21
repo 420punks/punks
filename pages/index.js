@@ -45,7 +45,10 @@ export default function Home({ about, roadmap, merch, project, mint }) {
 
 	return (
 		<>
-			<Meta title='420 Punks' desc='Descrition' />
+			<Meta
+				title='420 Punks'
+				desc='A total of 420 punks living on the polygon blockchain'
+			/>
 
 			<Hero
 				title='420 Punks'
