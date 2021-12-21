@@ -34,8 +34,8 @@ export async function getStaticProps() {
 			roadmap: roadmap.items,
 			merch: merch.items,
 			mint: mint.items,
-			revalidate: 1,
 		},
+		revalidate: 1,
 	};
 }
 
