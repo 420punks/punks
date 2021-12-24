@@ -26,7 +26,7 @@ export default function Leaderboard({ leaderboard }) {
 				{sorted.map((medals, index) => (
 					<tr key={medals.sys.id} className={`${index === 0 && "first"}`}>
 						<td className='name' label='Name'>
-							Name
+							{medals.field.name}
 						</td>
 						<td className='bronze' label='Bronze'>
 							{medals.fields.bronze}
