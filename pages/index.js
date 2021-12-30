@@ -54,7 +54,7 @@ export default function Home({ about, roadmap, merch, project, mint }) {
 			<Hero
 				title='420 Punks'
 				tagline='Tagline'
-				opensea='https://opensea.io/collection/the420punks'
+				opensea='https://opensea.io/collection/the420punks?tab=activity'
 			/>
 
 			<NFTSlider />
