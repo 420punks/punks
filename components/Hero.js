@@ -13,7 +13,7 @@ export default function Hero(props) {
 					</div>
 					<h1 className='mb-6'>{props.title}</h1>
 					{/* <h2 className='relative mb-4 text-4xl'>{props.tagline}</h2> */}
-					<Button url={props.opensea} text='View on Opensea' />
+					<Button url={props.opensea} text='Mint Here' />
 				</div>
 			</div>
 		</>
