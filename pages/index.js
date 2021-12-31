@@ -38,6 +38,24 @@ export async function getStaticProps() {
 		revalidate: 1,
 	};
 }
+function updateTimer() {
+	const future  = Date.parse("January 1, 2022 8:30:00");
+	const now     = new Date();
+	const diff    = future - now;
+	
+	const days  = Math.floor( diff / (1000*60*60*24) );
+	const hours = Math.floor( diff / (1000*60*60) );
+	const minutes  = Math.floor( diff / (1000*60) );
+	const seconds  = Math.floor( diff / 1000 );
+	
+	const d = days;
+	const h = hours - days  * 24;
+	const m = minutes  - hours * 60;
+	const s = seconds  - minutes  * 60;
+
+	document.getElementById("countdown").innerHTML = d + ' days, ' + h + ' hours, ' + m + ' minutes & ' + s + ' seconds'
+}
+setInterval(() => {updateTimer()}, 1000)
 
 export default function Home({ about, roadmap, merch, project, mint }) {
 	const roadmapSorted = roadmap.sort(
