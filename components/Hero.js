@@ -13,7 +13,7 @@ export default function Hero(props) {
                     </div>
                     <h1 className='mb-6'>{props.title}</h1>
                     <h2 id="countdown" className='relative mb-4 text-4xl countdown'></h2>
-                    <Button url={props.opensea} text='Mint Here | 830 AM PST , 1st January' />
+                    <Button url={props.opensea} text='Mint Here' />
                 </div>
             </div>
         </>
