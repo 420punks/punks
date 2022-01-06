@@ -39,7 +39,7 @@ export async function getStaticProps() {
 	};
 }
 function updateTimer() {
-	const future  = Date.parse("January 1, 2022 8:30:00 PST");
+	const future  = Date.parse("January 7, 2022 8:30:00 PST");
 	const now     = new Date();
 	const diff    = future - future;
 	
