@@ -41,7 +41,7 @@ export async function getStaticProps() {
 function updateTimer() {
 	const future  = Date.parse("January 7, 2022 8:30:00 PST");
 	const now     = new Date();
-	const diff    = future - future;
+	const diff    = future - now;
 	
 	const days  = Math.floor( diff / (1000*60*60*24) );
 	const hours = Math.floor( diff / (1000*60*60) );
