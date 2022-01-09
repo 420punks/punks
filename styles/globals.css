@@ -86,9 +86,9 @@ a {
 .merchActive {
 	@apply !scale-100;
 }
-.countdown {
+/*.countdown {
     background-color: black;
-    padding: 10px;
+    padding: 10px;*/
 }
 
 .slick-dots {
