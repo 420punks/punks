@@ -12,7 +12,7 @@ export default function Hero(props) {
                         <Image src={logo} alt='420 Punks' />
                     </div>
                     <h1 className='mb-6'>{props.title}</h1>
-                    <h2 id="countdown" className='relative mb-4 text-4xl countdown'></h2>
+                    /*<h2 id="countdown" className='relative mb-4 text-4xl countdown'></h2>*/
                     <Button url={props.opensea} text='Reveal' />
                 </div>
             </div>
