@@ -38,7 +38,7 @@ export async function getStaticProps() {
 		revalidate: 1,
 	};
 }
-function updateTimer() {
+/*function updateTimer() {
 	const future  = Date.parse("January 7, 2022 8:30:00 PST");
 	const now     = new Date();
 	const diff    = future - now;
@@ -56,7 +56,7 @@ function updateTimer() {
 	document.getElementById("countdown").innerHTML = d + ' days, ' + h + ' hours, ' + m + ' minutes & ' + s + ' seconds'
 }
 setInterval(() => {updateTimer()}, 1000)
-
+*/
 export default function Home({ about, roadmap, merch, project, mint }) {
 	const roadmapSorted = roadmap.sort(
 		(first, second) => first.fields.percentage - second.fields.percentage
